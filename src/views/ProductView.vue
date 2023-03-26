@@ -8,9 +8,6 @@
 <script>
 import axios from 'axios';
 
-function randInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
 
 export default {
   name: 'ProductView',
@@ -25,32 +22,42 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener('hashchange', () => {
-      console.log('eee')
-      this.currentPath = window.location.hash
-    })
 
-    axios.get(`http://localhost:9090/product`)
-        .then(users => {
-          console.log('done')
-          const i = randInt(users.length);
-          this.msg = users[i].first_name
-        })
+    try {
 
-    axios.get(`http://localhost:9090/product2`)
-        .then(resp => resp.data.data)
-        .then(users => {
-          console.log('done2')
-          const i = randInt(users.length);
-          this.msg = users[i].first_name
-        })
+      // this.$axios.get(`http://192.168.1.104:9091/product`)
+      //     .then((val) => {
+      //       console.log('9091/product')
+      //       console.log(val.data)
+      //     })
+      //     .catch(function (error) {
+      //       console.log(error);
+      //     })
+      //
+      //
+      // this.$axios.get(`http://192.168.1.104:9090/product`)
+      //     .then((val) => {
+      //       console.log('9090/product')
+      //       console.log(val.data)
+      //     })
+      //     .catch(function (error) {
+      //       console.log(error);
+      //     })
+      //
+      // this.$axios.get(`http://192.168.1.104:9090/item`)
+      //     .then((val) => {
+      //       console.log('9090/item')
+      //       console.log(val.data)
+      //     })
+      //     .catch(function (error) {
+      //       console.log(error);
+      //     })
+    } catch (e) {
+      console.error(e)
+    }
 
-    axios.get(`http://localhost:9090/sss`)
-        .then(users => {
-          console.log('done sss' + users)
-
-        })
   }
+
 };
 
 </script>
