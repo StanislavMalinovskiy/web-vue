@@ -10,7 +10,7 @@ const axiosInstance = axios.create({
     // withCredentials: true,
 });
 
-axiosInstance.defaults.headers.common['Access-Control-Allow-Origin'] = 'http://192.168.1.104:8080';
+axiosInstance.defaults.headers.common['Access-Control-Allow-Origin'] = 'http://192.168.0.108:8080';
 
 const app = createApp(App)
 app.use(createPinia())

@@ -25,7 +25,7 @@ export default {
 
     try {
 
-      // this.$axios.get(`http://192.168.1.104:9091/product`)
+      // this.$axios.get(`http://192.168.0.108:9091/product`)
       //     .then((val) => {
       //       console.log('9091/product')
       //       console.log(val.data)
@@ -35,7 +35,7 @@ export default {
       //     })
       //
       //
-      // this.$axios.get(`http://192.168.1.104:9090/product`)
+      // this.$axios.get(`http://192.168.0.108:9090/product`)
       //     .then((val) => {
       //       console.log('9090/product')
       //       console.log(val.data)
@@ -44,7 +44,7 @@ export default {
       //       console.log(error);
       //     })
       //
-      // this.$axios.get(`http://192.168.1.104:9090/item`)
+      // this.$axios.get(`http://192.168.0.108:9090/item`)
       //     .then((val) => {
       //       console.log('9090/item')
       //       console.log(val.data)

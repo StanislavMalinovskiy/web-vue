@@ -13,7 +13,7 @@ export default defineConfig({
     strictPort: true,
     hmr: {
       port: 8080,
-      host: "192.168.1.104",
+      host: "192.168.0.108",
     },
   },
   plugins: [vue()],
